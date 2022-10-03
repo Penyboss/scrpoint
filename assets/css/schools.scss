@@ -1,0 +1,70 @@
+@import url('style.css');
+
+.school-filter {
+	position: relative;
+}
+.school-input-container {
+	position: relative;
+}
+.school-input-icon {
+	font-size: 2rem;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: var(--transition);
+}
+.school-input-icon.active {
+	transform: rotate(180deg) translateY(9px);
+}
+.school-input,
+.options {
+	border: 2px solid var(--bd-color);
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: var(--body-font);
+	padding: 8px;
+	transition: var(--transition);
+	width: 100%;
+}
+.options {
+	background-color: var(--big-box-color);
+	display: none;
+	margin-top: 10px;
+	overflow: hidden;
+	padding: 0 0 5px;
+	transition: var(--transition);
+}
+.option:not(:last-child) {
+	border-bottom: 1px solid var(--bd-color);
+}
+.option {
+	cursor: pointer;
+	display: block;
+	padding: 5px;
+	transition: var(--transition);
+}
+.option:hover {
+	background-color: var(--pri-color);
+	color: white;
+}
+.school-filter.active {
+	.options {
+		display: block;
+	}
+}
+.school-list {
+	margin-top: 15px;
+}
+.school-link {
+	border-bottom: 1px solid var(--bd-color);
+	color: black;
+	display: block;
+	font-size: var(--body-font);
+	padding: 8px 0;
+	transition: var(--transition);
+}
+.school-link:hover {
+	color: var(--pri-color);
+	text-decoration: underline;
+}

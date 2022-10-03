@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ScrPoint - Schools</title>
+		<!-- * /=======/ icon link /=======/ -->
+
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+
+		<link rel="stylesheet" href="box/css/boxicons.css" />
+		<!-- * /=======/ CSS LINK /=======/ -->
+
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/schools.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="header_container">
+				<h1 class="logo">Scr<span>Point</span></h1>
+
+				<nav>
+					<ul
+						id="primary-navigation"
+						class="primary-navigation"
+						data-visible="false"
+					>
+						<li>
+							<a class="links active" href="/#home">Home</a>
+						</li>
+						<li>
+							<a class="links" href="/#about">About</a>
+						</li>
+						<li>
+							<a class="links" href="/#services">Services</a>
+						</li>
+						<li>
+							<a class="links" href="/#blog">Blog</a>
+						</li>
+						<li>
+							<a class="links" href="/#faq">FAQ</a>
+						</li>
+						<li>
+							<a class="links" href="/#contact">Contact</a>
+						</li>
+					</ul>
+				</nav>
+
+				<button
+					class="nav-toggle"
+					aria-controls="primary-navigation"
+					aria-label="nav-toggle"
+					aria-expanded="false"
+				>
+					<span class="nav-toggle-container">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+					<span class="sr-only">Menu</span>
+				</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="section school-sec">
+				<figure class="school-img">
+					<img src="assets/images/school.png" alt="" />
+				</figure>
+
+				<div class="school-list-container">
+					<div class="school-filter">
+						<div class="school-input-container">
+							<input
+								class="school-input"
+								type="text"
+								value="Select category..."
+								readonly
+							/>
+							<i class="bx bx-chevron-down school-input-icon"></i>
+						</div>
+
+						<div class="options">
+							<span
+								onclick="schCategory('Select category...')"
+								data-filter="all"
+								class="option"
+							>
+								All
+							</span>
+
+							<span
+								onclick="schCategory('Federal Universities')"
+								data-filter=".fedUni"
+								class="option"
+							>
+								Federal Universities
+							</span>
+							<span
+								onclick="schCategory('State Universities')"
+								data-filter=".stateUni"
+								class="option"
+								>State Universities</span
+							>
+							<span
+								onclick="schCategory('Federal Polytechnics')"
+								class="option"
+								data-filter=".fedPoly"
+								>Federal Polytechnics</span
+							>
+							<span
+								onclick="schCategory('State Polytechnics')"
+								class="option"
+								data-filter=".statePoly"
+								>State Polytechnics</span
+							>
+						</div>
+					</div>
+
+					<ul class="school-list">
+						<li>
+							<a href="fuoye.html" class="school-link mix fedUni">Fuoye</a>
+						</li>
+						<li>
+							<a href="lasu.html" class="school-link mix stateUni">Lasu</a>
+						</li>
+						<li>
+							<a href="Kwasu.html" class="school-link mix stateUni">Kwasu</a>
+						</li>
+						<li>
+							<a href="Uniosun.html" class="school-link mix stateUni"
+								>Uniosun</a
+							>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<footer>
+				<div class="footer-container">
+					<div class="footer-content">
+						<h2>
+							<a class="footer-title" href="#">Scr<span>Point</span></a>
+						</h2>
+
+						<p class="footer-text">Lorem ipsum dolor sit amet.</p>
+					</div>
+
+					<div class="footer-links">
+						<a class="footer-link" href="https//wa.me/2347040589754">
+							<ion-icon name="logo-whatsapp" class="footer-icon"></ion-icon>
+						</a>
+						<a class="footer-link" href="mailto:abdulqudusadiq@gmqil.com">
+							<ion-icon name="mail-open-outline" class="footer-icon"></ion-icon>
+						</a>
+						<a class="footer-link" href="https//wa.me/2347040589754">
+							<ion-icon name="logo-twitter" class="footer-icon"></ion-icon>
+						</a>
+						<a class="footer-link" href="https//github.com/Penyboss">
+							<ion-icon name="logo-github" class="footer-icon"></ion-icon>
+						</a>
+					</div>
+				</div>
+				<div class="copyright">
+					<a href="https://wa.me/2347040589754" class="copyright-text"
+						>&copy; penybossDev.All right reserved</a
+					>
+				</div>
+			</footer>
+
+			<!-- * /=======/ JS LINK /=======/ -->
+
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/mixitup.min.js"></script>
+			<script>
+				let schFilters = mixitup('.school-list', {
+					selectors: {
+						target: '.school-link',
+					},
+					animation: {
+						duration: 300,
+					},
+				});
+			</script>
+		</main>
+	</body>
+</html>

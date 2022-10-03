@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ScrPoint - Fuoye Screening Point</title>
+
+		<!-- * /=======/ CSS LINK /=======/ -->
+		<link rel="stylesheet" href="box/css/boxicons.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/universities.css" />
+		<link rel="stylesheet" href="assets/css/fuoye.css" />
+	</head>
+
+	<body>
+		<main>
+			<article>
+				<section class="section school-intro">
+					<header class="school-header">
+						<div class="school-header-container">
+							<h1 class="logo">Scr<span class="logo-point">Point</span></h1>
+
+							<h2 class="school-logo">FUOYE</h2>
+						</div>
+					</header>
+
+					<h1 class="hero-title">Fuoye Screening point calculator</h1>
+
+					<div class="intro-content">
+						<figure class="intro-image">
+							<img src="assets/images/teach.png" alt="" />
+						</figure>
+						<p class="fuoye-intro">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+							impedit corporis voluptates, quas sapiente reiciendis aperiam
+							excepturi earum unde illum quisquam dolor necessitatibus aliquid
+							consequuntur inventore! Nesciunt provident laborum at.
+						</p>
+					</div>
+				</section>
+
+				<section class="section">
+					<div class="tool" id="tool">
+						<h2 class="section-title">Calculate Your Point</h2>
+
+						<div class="fuoye-calc">
+							<form class="tool-container">
+								<div class="input-container">
+									<input
+										type="text"
+										required
+										autocomplete="off"
+										class="input data-input"
+									/>
+									<span>Score Input</span>
+								</div>
+
+								<div class="input-container">
+									<input
+										type="text"
+										required
+										autocomplete="off"
+										class="input data-input"
+									/>
+									<span>Score Input</span>
+								</div>
+
+								<div class="input-container">
+									<input
+										type="text"
+										required
+										autocomplete="off"
+										class="input data-input"
+									/>
+									<span>Score Input</span>
+								</div>
+								<div class="input-container">
+									<input
+										type="text"
+										required
+										autocomplete="off"
+										class="input data-input"
+									/>
+									<span>Score Input</span>
+								</div>
+								<div class="input-container">
+									<input
+										type="text"
+										required
+										autocomplete="off"
+										class="input data-input"
+									/>
+									<span>Score Input</span>
+								</div>
+
+								<div class="sitting-input-container">
+									<div class="sitting-cover">
+										<input
+											type="text"
+											class="sitting-input"
+											placeholder="Number of sitting"
+											readonly
+										/>
+
+										<ion-icon
+											name="chevron-down-outline"
+											class=""
+											sitting-icon
+										></ion-icon>
+									</div>
+
+									<div class="sitting-options">
+										<span onclick="sittingValue('1')" class="sitting-option"
+											>1 Sitting</span
+										>
+										<span onclick="sittingValue('2')" class="sitting-option"
+											>2 Sitting</span
+										>
+									</div>
+								</div>
+
+								<div class="input-container">
+									<input
+										type="tel"
+										required
+										autocomplete="off"
+										class="input jamb-input"
+									/>
+									<span>Jamb Score</span>
+								</div>
+
+								<button type="button" class="button result">
+									Get Result
+									<ion-icon name="book-outline"></ion-icon>
+								</button>
+							</form>
+
+							<div class="fuoye-result-container">
+								<h3 class="fuoye-result-title">Your Point</h3>
+
+								<div class="fuoye-result-summary-container">
+									<span
+										class="fuoye-result-summary fuoye-jamb-point"
+										data-title="Jamb point"
+										>0</span
+									><span
+										class="fuoye-result-summary fuoye-OLevel-total"
+										data-title="O'l total"
+										>0</span
+									><span
+										class="fuoye-result-summary fuoye-sitting-point"
+										data-title="Sitting point"
+										>0</span
+									>
+								</div>
+
+								<div class="main-result">
+									<div class="fuoye-point-container">
+										<span class="fuoye-point">0%</span>
+									</div>
+
+									<svg
+										class="fuoye-svg"
+										xmlns="http://www.w3.org/2000/svg"
+										version="1.1"
+										width="160px"
+										height="160px"
+									>
+										<defs>
+											<linearGradient id="GradientColor">
+												<stop offset="0%" stop-color="#3fff00" />
+												<stop offset="50%" stop-color="#39ff14" />
+												<stop offset="100%" stop-color="#ffee00" />
+											</linearGradient>
+										</defs>
+										<circle cx="80" cy="80" r="70" stroke-linecap="round" />
+									</svg>
+								</div>
+
+								<span class="fuoye-result-remark"> 🙃 </span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section" id="faq">
+					<h2 class="section-title">Frequent Asked Questions</h2>
+
+					<div class="faq-container">
+						<figure class="faq-image container">
+							<img src="assets/images/faq_image.png" alt="" />
+						</figure>
+
+						<div class="faq-content">
+							<h3 class="accordion-heading">people also ask</h3>
+
+							<div class="accordion">
+								<div class="accordion-question">
+									<h3>What is screening?</h3>
+
+									<ion-icon
+										name="chevron-down-outline"
+										class="accordion-icon"
+									></ion-icon>
+								</div>
+
+								<p class="accordion-answer">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+									optio enim nam iure officiis natus quaerat repellendus dicta,
+									ipsum quae molestias tempora. Delectus cumque doloribus beatae
+									quam iure? Distinctio, ipsa!
+								</p>
+							</div>
+							<div class="accordion">
+								<div class="accordion-question">
+									<h3>What is O'level?</h3>
+
+									<ion-icon
+										name="chevron-down-outline"
+										class="accordion-icon"
+									></ion-icon>
+								</div>
+
+								<p class="accordion-answer">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+									optio enim nam iure officiis natus quaerat repellendus dicta,
+									ipsum quae molestias tempora. Delectus cumque doloribus beatae
+									quam iure? Distinctio, ipsa!
+								</p>
+							</div>
+							<div class="accordion">
+								<div class="accordion-question">
+									<h3>Universities that do screening?</h3>
+
+									<ion-icon
+										name="chevron-down-outline"
+										class="accordion-icon"
+									></ion-icon>
+								</div>
+
+								<p class="accordion-answer">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+									optio enim nam iure officiis natus quaerat repellendus dicta,
+									ipsum quae molestias tempora. Delectus cumque doloribus beatae
+									quam iure? Distinctio, ipsa!
+								</p>
+							</div>
+							<div class="accordion">
+								<div class="accordion-question">
+									<h3>What is Post Utme?</h3>
+
+									<ion-icon
+										name="chevron-down-outline"
+										class="accordion-icon"
+									></ion-icon>
+								</div>
+
+								<p class="accordion-answer">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+									optio enim nam iure officiis natus quaerat repellendus dicta,
+									ipsum quae molestias tempora. Delectus cumque doloribus beatae
+									quam iure? Distinctio, ipsa!
+								</p>
+							</div>
+							<div class="accordion">
+								<div class="accordion-question">
+									<h3>What is One sitting?</h3>
+
+									<ion-icon
+										name="chevron-down-outline"
+										class="accordion-icon"
+									></ion-icon>
+								</div>
+
+								<p class="accordion-answer">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+									optio enim nam iure officiis natus quaerat repellendus dicta,
+									ipsum quae molestias tempora. Delectus cumque doloribus beatae
+									quam iure? Distinctio, ipsa!
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+
+			<nav class="uni-nav">
+				<div class="uni-toggle">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+
+				<li class="uni-nav-link" style="--i: 0">
+					<a href="index.html">
+						<ion-icon name="home-outline"></ion-icon>
+					</a>
+				</li>
+				<li class="uni-nav-link" style="--i: 1">
+					<a href="#">
+						<ion-icon name="bulb-outline"></ion-icon>
+					</a>
+				</li>
+				<li class="uni-nav-link" style="--i: 2">
+					<a href="#">
+						<ion-icon name="construct-outline"></ion-icon>
+					</a>
+				</li>
+				<li class="uni-nav-link" style="--i: 3">
+					<a href="#">
+						<ion-icon name="book-outline"></ion-icon>
+					</a>
+				</li>
+				<li class="uni-nav-link" style="--i: 4">
+					<a href="#">
+						<ion-icon name="help-circle-outline"></ion-icon>
+					</a>
+				</li>
+			</nav>
+		</main>
+
+		<script src="assets/js/sweetalert2.all.min.js"></script>
+
+		<script src="assets/js/universities.js"></script>
+
+		<script src="assets/js/fuoye.js"></script>
+	</body>
+</html>

@@ -516,7 +516,7 @@ h4 {
 }
 
 .accordion-answer {
-  padding: 0 10px 5px;
+  padding: 0 10px;
   overflow: hidden;
   max-height: 0;
   transition: var(--transition-1);

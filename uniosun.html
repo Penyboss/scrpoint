@@ -42,7 +42,7 @@
 				</div>
 			</div>
 
-			<div
+			<button
 				class="theme--toggle left"
 				title="Theme Toggle"
 				aria-label="Theme Toggle"
@@ -51,7 +51,7 @@
 					<ion-icon name="sunny-outline" class="light"></ion-icon>
 					<ion-icon name="moon-outline" class="dark"></ion-icon>
 				</span>
-			</div>
+			</button>
 		</header>
 
 		<!--* /====/ Aside /====/ -->
@@ -59,9 +59,15 @@
 		<aside>
 			<nav>
 				<ul class="nav-link-container" title="Nav Toggle">
-					<div class="nav-toggle">
-						<ion-icon name="add-outline"></ion-icon>
-					</div>
+					<li>
+						<button
+							class="nav-toggle"
+							aria-label="Nav Toggle"
+							title="Nav Toggle"
+						>
+							<ion-icon name="add-outline"></ion-icon>
+						</button>
+					</li>
 
 					<li>
 						<a
@@ -143,7 +149,7 @@
 						<p class="left margin-block">
 							Welcome to ScrPoint, the best website to calculate your screening
 							point with ease and without worrying to do any calculation on your
-							own <span class="two-rem">😎</span>.
+							own <span>😎</span>.
 						</p>
 					</div>
 
@@ -197,8 +203,9 @@
 									autocomplete="off"
 									required
 									maxlength="2"
+									id="OLevel1"
 								/>
-								<span>O'level Input</span>
+								<label for="OLevel1">O'level Input</label>
 							</div>
 
 							<div class="input-container left">
@@ -208,8 +215,9 @@
 									autocomplete="off"
 									required
 									maxlength="2"
+									id="OLevel2"
 								/>
-								<span>O'level Input</span>
+								<label for="OLevel2">O'level Input</label>
 							</div>
 
 							<div class="input-container left">
@@ -219,8 +227,9 @@
 									autocomplete="off"
 									required
 									maxlength="2"
+									id="OLevel3"
 								/>
-								<span>O'level Input</span>
+								<label for="OLevel3">O'level Input</label>
 							</div>
 
 							<div style="margin-bottom: 15px" class="input-container left">
@@ -230,8 +239,9 @@
 									autocomplete="off"
 									required
 									maxlength="2"
+									id="OLevel4"
 								/>
-								<span>O'level Input</span>
+								<label for="OLevel4">O'level Input</label>
 							</div>
 
 							<div class="input-container left">
@@ -241,8 +251,9 @@
 									autocomplete="off"
 									required
 									maxlength="2"
+									id="OLevel5"
 								/>
-								<span>O'level Input</span>
+								<label for="OLevel5">O'level Input</label>
 							</div>
 
 							<div class="input-container left">
@@ -252,8 +263,9 @@
 									autocomplete="off"
 									required
 									maxlength="3"
+									id="jamb"
 								/>
-								<span>Jamb Score</span>
+								<label for="jamb">Jamb Score</label>
 							</div>
 
 							<button
@@ -451,13 +463,13 @@
 		<a href="#" class="toTop">
 			<ion-icon name="arrow-up-outline"></ion-icon>
 		</a>
+
+		<script src="https://unpkg.com/scrollreveal"></script>
+
+		<script src="assets/js/general.js"></script>
+
+		<script src="assets/js/uniosun.js"></script>
+
+		<script src="assets/js/aside.js"></script>
 	</body>
-
-	<script src="https://unpkg.com/scrollreveal"></script>
-
-	<script src="assets/js/general.js"></script>
-
-	<script src="assets/js/UNIOSUN.js"></script>
-
-	<script src="assets/js/aside.js"></script>
 </html>

@@ -104,7 +104,7 @@ calculate.addEventListener('click', () => {
 
     swal.fire({
       position: 'center',
-      title: 'Oops 🙁',
+      title: 'Oops 😭😭😭',
       text: 'Ensure all input are filled.',
       icon: 'error',
     });
@@ -129,7 +129,7 @@ window.addEventListener('keyup', e => {
 
     swal.fire({
       position: 'center',
-      title: 'Oops 🙁',
+      title: 'Oops 😭😭😭',
       text: 'Ensure all input are filled.',
       icon: 'error',
     });

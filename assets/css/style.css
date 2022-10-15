@@ -140,8 +140,9 @@ h4 {
   color: var(--primary-color);
 }
 
-.two-rem {
-  font-size: 2rem;
+button {
+  border: none;
+  background: none;
 }
 
 .button {
@@ -298,155 +299,46 @@ h4 {
 }
 
 .nav--toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 30px;
   position: relative;
-  transition: 0.5s;
-  cursor: pointer;
-  z-index: 9999;
+  z-index: 999;
 }
 .nav--toggle span {
-  text-indent: -9999999%;
   display: block;
+  text-indent: -999%;
   overflow: hidden;
   position: absolute;
   height: 2px;
-  transition: var(--transition-2);
-  background: var(--title-color);
-  border-radius: 3px;
-}
-.nav--toggle .stroke1 {
-  -webkit-animation: stroke1AnimeStart 0.8s forwards;
-          animation: stroke1AnimeStart 0.8s forwards;
-  width: 50%;
-}
-.nav--toggle .stroke2 {
+  background-color: var(--title-color);
   width: 100%;
+  border-radius: 2px;
+  transition: var(--transition-1);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.nav--toggle .stroke3 {
+.nav--toggle .bar-1 {
   width: 50%;
-  -webkit-animation: stroke2AnimeStart 0.8s forwards;
-          animation: stroke2AnimeStart 0.8s forwards;
+  transform-origin: left;
+  transform: translate(-100%, -15px);
 }
-.nav--toggle[aria-expanded=true] {
-  transform: rotate(90deg);
+.nav--toggle .bar-3 {
+  width: 50%;
+  transform: translate(0, 13px);
+  left: auto;
+  transform-origin: right;
+  right: 0;
 }
-.nav--toggle[aria-expanded=true] .stroke1 {
-  -webkit-animation: stroke1AnimeEnd 0.8s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
-          animation: stroke1AnimeEnd 0.8s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+.nav--toggle[aria-expanded=true] .bar-1 {
+  transform: translate(0) rotate(-45deg);
 }
-.nav--toggle[aria-expanded=true] .stroke2 {
-  transform: scaleX(0);
+.nav--toggle[aria-expanded=true] .bar-2 {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
-.nav--toggle[aria-expanded=true] .stroke3 {
-  -webkit-animation: stroke2AnimeEnd 0.8s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
-          animation: stroke2AnimeEnd 0.8s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-@-webkit-keyframes stroke1AnimeStart {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: translate(0);
-  }
-  100% {
-    transform: translate(-50%, -8px);
-    width: 50%;
-  }
+.nav--toggle[aria-expanded=true] .bar-3 {
+  transform: translate(-100%, 0) rotate(-45deg);
 }
 
-@keyframes stroke1AnimeStart {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: translate(0);
-  }
-  100% {
-    transform: translate(-50%, -8px);
-    width: 50%;
-  }
-}
-@-webkit-keyframes stroke1AnimeEnd {
-  0% {
-    transform: translate(-50%, -8px);
-  }
-  50% {
-    transform: translate(0);
-    width: 100%;
-  }
-  100% {
-    transform: rotate(-315deg);
-    width: 100%;
-  }
-}
-@keyframes stroke1AnimeEnd {
-  0% {
-    transform: translate(-50%, -8px);
-  }
-  50% {
-    transform: translate(0);
-    width: 100%;
-  }
-  100% {
-    transform: rotate(-315deg);
-    width: 100%;
-  }
-}
-@-webkit-keyframes stroke2AnimeStart {
-  0% {
-    transform: rotate(315deg);
-  }
-  50% {
-    transform: translate(0);
-  }
-  100% {
-    transform: translate(47%, 8px);
-    width: 50%;
-  }
-}
-@keyframes stroke2AnimeStart {
-  0% {
-    transform: rotate(315deg);
-  }
-  50% {
-    transform: translate(0);
-  }
-  100% {
-    transform: translate(47%, 8px);
-    width: 50%;
-  }
-}
-@-webkit-keyframes stroke2AnimeEnd {
-  0% {
-    transform: translate(47%, 8px);
-  }
-  50% {
-    transform: translate(0);
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-    transform: rotate(315deg);
-  }
-}
-@keyframes stroke2AnimeEnd {
-  0% {
-    transform: translate(47%, 8px);
-  }
-  50% {
-    transform: translate(0);
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-    transform: rotate(315deg);
-  }
-}
 .hero {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
@@ -490,7 +382,7 @@ h4 {
 }
 
 .accordion {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid var(--border-color);
   overflow: hidden;
 }
 
@@ -550,7 +442,7 @@ h4 {
   transition: var(--transition-1);
 }
 
-.input-container span {
+.input-container label {
   position: absolute;
   font-size: var(--body-font);
   left: 0;
@@ -572,7 +464,7 @@ h4 {
 .email:not(:placeholder-shown) {
   border-color: var(--primary-color);
 }
-.email:not(:-moz-placeholder-shown) ~ span {
+.email:not(:-moz-placeholder-shown) ~ label {
   font-size: 1.2rem;
   padding: 0 5px;
   letter-spacing: 2px;
@@ -580,7 +472,7 @@ h4 {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
-.email:not(:-ms-input-placeholder) ~ span {
+.email:not(:-ms-input-placeholder) ~ label {
   font-size: 1.2rem;
   padding: 0 5px;
   letter-spacing: 2px;
@@ -588,8 +480,8 @@ h4 {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
-.input:is(:focus, :valid) ~ span,
-.email:not(:placeholder-shown) ~ span {
+.input:is(:focus, :valid) ~ label,
+.email:not(:placeholder-shown) ~ label {
   font-size: 1.2rem;
   padding: 0 5px;
   letter-spacing: 2px;
@@ -601,7 +493,7 @@ h4 {
 .input:valid {
   border-color: #23dc3d !important;
 }
-.input:valid ~ span {
+.input:valid ~ label {
   color: #23dc3d !important;
 }
 
@@ -688,35 +580,31 @@ h4 {
 
 .nav-link-container {
   position: fixed;
-  bottom: 45px;
+  bottom: 60px;
   left: 50%;
   z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   transform: translateX(-50%);
-  width: 250px;
+  width: 260px;
 }
 
 .nav-toggle {
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  width: 55px;
-  height: 55px;
   background-color: var(--primary-color);
   color: var(--white);
   font-size: 2.5rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  position: absolute;
   z-index: 999;
+  transform: translateX(-20px) !important;
 }
 
 .nav-link,
 .nav-toggle {
+  border-radius: 50%;
   display: grid;
   place-items: center;
-  border-radius: 50%;
   position: absolute;
   transition: var(--transition-2);
 }
@@ -727,27 +615,29 @@ h4 {
 }
 
 .nav-link {
-  width: 40px;
-  height: 40px;
+  height: 45px;
+  width: 45px;
   color: var(--title-color);
   background-color: var(--background-sec);
-  transform: translate(100px, -15px);
   box-shadow: var(--shadow);
-  transform-origin: 125px;
   transition-delay: calc(0.1s * var(--i));
   left: 0;
   opacity: 0;
+  transform-origin: 130px;
+  transform: translateX(112px);
   font-size: 2rem;
 }
 .nav-link:hover {
   background-color: transparent;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 .nav-link:hover .nav-icon {
   color: var(--primary-color);
 }
 
 .nav-link-container.active .nav-link {
-  transform: translateY(-10px) rotate(calc(45deg * var(--i)));
+  transform: translate(0) rotate(calc(45deg * var(--i)));
   opacity: 1;
 }
 .nav-link-container.active .nav-toggle {
@@ -758,9 +648,9 @@ h4 {
   text-align: center;
 }
 
-.jamb:is(:valid, :focus) ~ span,
-.oLevel:is(:valid, :focus) ~ span,
-.sitting:is(:valid, :focus) ~ span {
+.jamb:is(:valid, :focus) ~ label,
+.oLevel:is(:valid, :focus) ~ label,
+.sitting:is(:valid, :focus) ~ label {
   background-color: var(--background-sec);
 }
 
@@ -837,16 +727,6 @@ svg {
     max-width: 720px;
     margin-inline: auto;
   }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .span2 {
-    grid-column: span 2;
-  }
-  .center {
-    place-self: center;
-  }
   .nav--toggle {
     display: none;
   }
@@ -867,6 +747,22 @@ svg {
   .nav--link:hover {
     color: var(--primary-color);
   }
+}
+@media (min-width: 992px) {
+  :root {
+    --font-size-1: 6rem;
+    --font-size-2: 3.2rem;
+  }
+  h1 {
+    line-height: 1.2;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .span2 {
+    grid-column: span 2;
+  }
   .grid--row {
     grid-row: 2/3;
   }
@@ -877,14 +773,8 @@ svg {
     -moz-column-gap: 25px;
          column-gap: 25px;
   }
-}
-@media (min-width: 992px) {
-  :root {
-    --font-size-1: 6rem;
-    --font-size-2: 3.2rem;
-  }
-  h1 {
-    line-height: 1.2;
+  .center {
+    place-self: center;
   }
   .logo h1 {
     font-size: 4rem !important;

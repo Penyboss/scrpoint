@@ -73,28 +73,28 @@
 					</li>
 				</ul>
 
-				<div
+				<button
 					class="theme--toggle left"
-					title="Theme Toggle"
-					aria-label="Theme Toggle"
+					title="Change Theme"
+					aria-label="Change Theme"
 				>
 					<span class="light--dark">
 						<ion-icon name="sunny-outline" class="light"></ion-icon>
 						<ion-icon name="moon-outline" class="dark"></ion-icon>
 					</span>
-				</div>
+				</button>
 
-				<div
+				<button
 					class="nav--toggle"
 					aria-controls="nav--link-container"
 					aria-label="Toggle Menu"
 					title="Toggle Menu"
 					aria-expanded="false"
 				>
-					<span class="stroke1">stroke</span>
-					<span class="stroke2">stroke</span>
-					<span class="stroke3">stroke</span>
-				</div>
+					<span class="bar-1">bar</span>
+					<span class="bar-2">bar</span>
+					<span class="bar-3">bar</span>
+				</button>
 			</nav>
 		</header>
 
@@ -148,12 +148,16 @@
 							calculate their screening point with ease, without the need of any
 							worries. We provide fast and reliable tool to calculate your
 							<span>Screening Point</span> and forget your worries
-							<span class="two-rem">😏</span>. But it is only available for few
-							universities listed below <span class="two-rem">👇</span>.
+							<span>😏</span>. But it is only available for few universities
+							listed below <span>👇</span>.
 						</p>
 
 						<ul>
-							<h4 class="left margin-block">Here are the available schools:</h4>
+							<li>
+								<h4 class="left margin-block">
+									Here are the available schools:
+								</h4>
+							</li>
 
 							<li class="left">
 								<ion-icon
@@ -191,7 +195,7 @@
 									class="school--icon"
 								></ion-icon>
 								<a
-									href=""
+									href="lasu.html"
 									class="school"
 									title="Lagos State University"
 									aria-label="Lagos State University"
@@ -259,7 +263,7 @@
 							<p>
 								Lightweight and easy to use without the need of any experience,
 								just type your data and it will do the rest
-								<span class="two-rem">👍</span>.
+								<span>👍</span>.
 							</p>
 						</div>
 
@@ -278,7 +282,7 @@
 								ScrPoint is a browser-based
 								<em>(no software or app to install)</em>. It works on any device
 								<em>(windows, Android, Mac, Iphone, etc.)</em>
-								<span class="two-rem"> 😎</span>.
+								<span> 😎</span>.
 							</p>
 						</div>
 
@@ -291,11 +295,11 @@
 								/>
 							</figure>
 
-							<h3>It's Free <span class="two-rem">💯</span></h3>
+							<h3>It's Free <span>💯</span></h3>
 
 							<p>
 								It's completely free to use. No string attached
-								<span class="two-rem">😏</span>.
+								<span>😏</span>.
 							</p>
 						</div>
 					</div>
@@ -385,23 +389,25 @@
 							<div class="input-container left">
 								<input
 									type="text"
-									name="Full Name"
+									name="Name"
 									class="input"
 									autocomplete="off"
 									required
+									id="name"
 								/>
-								<span>Full Name</span>
+								<label for="name">Name</label>
 							</div>
 
 							<div class="input-container left">
 								<input
 									type="tel"
-									name="Phone"
+									name="Phone Number"
 									class="input"
 									autocomplete="off"
 									required
+									id="phone"
 								/>
-								<span>Phone</span>
+								<label for="phone">Phone Number</label>
 							</div>
 
 							<div class="input-container left">
@@ -412,13 +418,19 @@
 									placeholder=" "
 									autocomplete="off"
 									required
+									id="email"
 								/>
-								<span>Email</span>
+								<label for="email">Email</label>
 							</div>
 
 							<div class="input-container left">
-								<textarea name="Message" required class="input"></textarea>
-								<span>Message</span>
+								<textarea
+									name="Message"
+									id="message"
+									required
+									class="input"
+								></textarea>
+								<label for="message">Message</label>
 							</div>
 
 							<button

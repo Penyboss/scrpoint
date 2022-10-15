@@ -17,28 +17,31 @@ const calculator = () => {
     let score = data.value;
 
     if (data.value === 'A1' || data.value === 'a1') {
-      score = 8;
+      score = 10;
 
     } else if (data.value === 'B2' || data.value === 'b2') {
-      score = 7;
+      score = 9;
 
     } else if (data.value === 'B3' || data.value === 'b3') {
-      score = 6;
+      score = 8;
 
     } else if (data.value === 'C4' || data.value === 'c4') {
-      score = 5;
+      score = 7;
 
     } else if (data.value === 'C5' || data.value === 'c5') {
-      score = 4;
+      score = 6;
 
     } else if (data.value === 'C6' || data.value === 'c6') {
-      score = 3;
+      score = 5;
 
     } else if (data.value === 'D7' || data.value === 'd7') {
-      score = 2;
+      score = 4;
 
     } else if (data.value === 'E8' || data.value === 'e8') {
-      score = 1;
+      score = 3;
+
+    } else if (data.value === 'F9' || data.value === 'f9') {
+      score = 2;
 
     } else {
       score = 0;
@@ -48,7 +51,7 @@ const calculator = () => {
   }
 
 
-  jScore = +jamb.value / 400 * 60;
+  jScore = +jamb.value / 8;
 
   tScore = jScore + oScore;
 

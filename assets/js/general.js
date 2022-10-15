@@ -81,7 +81,9 @@ window.onscroll = () => {
 
   if (window.scrollY >= 500) {
     toTop.classList.add('active');
+
   } else {
+
     toTop.classList.remove('active');
   }
 };
